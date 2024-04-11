@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Saru</title>
+</head>
+<body>
+<div class="section" id="section1">
+    <h1 id="titre">Saru</h1>
+    <h3 id="description">Futur Ingénieur en Informatique</h3>
+    <button class="github"></button>
+    <img id="avatar" src="{% static 'images/avatar.png'%}">
+</div>
+<div class="section" id="section2">Section 2</div>
+<div class="section" id="section3">Section 3</div>
+
+</body>
+<script src="{% static 'javascript/main.js' %}"></script>
+</html>
