@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/formation.css' %}">
+
+<div class="section" id="section3">
+    {% include 'menu.html' %}
+    <h1 id="projet-titre" >Formations</h1>
+    <div class="projects">
+        {% for formatio in formation %}
+                <a href="{{formatio.ids}}" target="_blank" class="project">
+                  <img src="{{ formatio.image }}" />
+                  <p class="date">{{ formatio.datee }}</p>
+                  <p class="name">{{ formatio.titre}}</p>
+                  <p class="elm">{{formatio.desciption}}</p>
+                </a>
+        {% empty %}
+        <h1>Erreur.</h1>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+</div>

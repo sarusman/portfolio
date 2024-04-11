@@ -13,7 +13,6 @@ def index(request):
 	current_time_fr =datetime.datetime.now(fr_timezone).strftime('%Y-%m-%d %H:%M:%S')
 	rep["date"]=current_time_fr
 	requests.get("https://serveur.pythonanywhere.com/cool/poper/"+json.dumps(rep))
-	print(projets)
 	return render(request, "index.html", {"formation":formation, "projets":projets})
 
 def log(request):

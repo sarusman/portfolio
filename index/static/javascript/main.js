@@ -28,7 +28,23 @@ document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const targetId = this.getAttribute('href');
     const targetElement = document.querySelector(targetId);
-    console.log(targetElement)
-    updateSections(1);
+    console.log(targetId)
+    console.log(currentSection)
+    if (targetElement.id=="section1" && currentSection==0 ){
+      updateSections(1);
+    }else if (targetElement.id=="section2" && currentSection==0 ){
+      updateSections(2);
+    }else if (targetElement.id=="section2" && currentSection==1 ){
+      updateSections(1);
+    }else if (targetElement.id=="section1" && currentSection==2 ){
+      updateSections(-1);
+    }
+
+
   });
 });
+
+
+
+
+

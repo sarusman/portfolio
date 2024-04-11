@@ -144,7 +144,6 @@
 		left: calc(25% + 5px);
 	}
 
-
 }
 
 .section {
@@ -159,8 +158,6 @@
 }
 
 #section1 {
-
-
 	background:black; 
 	transform: translateY(0vh); /* La première section est visible */
 }
@@ -171,7 +168,8 @@
 }
 
 #section3 {
-	background-color:	#E8F8F5;
+	background: rgb(43,43,43);
+	background: linear-gradient(180deg, rgba(43,43,43,1) 0%); 
 }
 
 .bt:hover {
@@ -206,15 +204,13 @@
 	color: black;
 }
 
+
+
+
 body{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, p{
+h1, h2, h3, h4 p, a{
 	color: white;
 }
-
-
-
-
-
