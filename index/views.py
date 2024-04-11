@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from django.forms.models import model_to_dict
 import requests, json, pytz, datetime
+from .models import Formation, Projets
 
 def index(request):
-	#formation=Formation.objects.all()
-	#projets=Projets.objects.all()
+	formation=[model_to_dict(form) for form in Formation.objects.all()]
+	projets=[model_to_dict(pro) for pro in Projets.objects.all()]
 	client_ip="PRIVATE LOG POUR VOIR"
 	#rep=eval(requests.get(f"https://ipinfo.io/{client_ip}/json").text.replace("true", "True").replace("false", "False"))
 	rep={"ip":client_ip}
@@ -11,7 +13,8 @@ def index(request):
 	current_time_fr =datetime.datetime.now(fr_timezone).strftime('%Y-%m-%d %H:%M:%S')
 	rep["date"]=current_time_fr
 	requests.get("https://serveur.pythonanywhere.com/cool/poper/"+json.dumps(rep))
-	return render(request, "index.html")#,{"formation":formation, "projets":projets})
+	print(projets)
+	return render(request, "index.html", {"formation":formation, "projets":projets})
 
 def log(request):
 	data=eval(requests.get("https://serveur.pythonanywhere.com/see/see").text)

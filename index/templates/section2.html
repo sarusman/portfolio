@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/projets.css' %}">
+
+<div class="section" id="section2">
+    {% include 'menu.html' %}
+    <h1 id="projet-titre" >Projets</h1>
+    <div class="projects">
+        {% for projet in projets %}
+                <a href="{{projet.ids}}" target="_blank" class="project">
+                  <img src="{{ projet.image }}" />
+                  <p class="date">{{ projet.datee }}</p>
+                  <p class="name">{{ projet.titre}}</p>
+                  <p class="elm">{{projet.desciption}}</p>
+                </a>
+        {% empty %}
+        <h1>Erreur.</h1>
+        {% endfor %}
+    </div>
+</div>

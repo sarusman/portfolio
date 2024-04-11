@@ -1,0 +1,104 @@
+@media (max-width: 600px) {
+	#projet-titre {
+		position: fixed;
+		top: 2%;
+		left: 10%;
+		font-size: 3em;
+	}
+	.projects {
+	  position: fixed;
+  	  display: flex;
+  	  margin-right: 5px;
+  	  max-width: 500px;
+  	  max-height: 900px;
+  	  justify-content: center;
+  	  flex-wrap: wrap;
+	  top: 18%;
+  	  margin-bottom: 15px;
+	  left: 10%;
+
+	}
+	.project{
+	  margin: 10px;
+  	  width: calc(25% - 10px);
+  	  flex: 2;
+  	  margin-bottom: 15px;
+  	  flex-direction: column;
+
+
+	}
+	.project img {
+	  width: 100px; 
+	  height: auto;
+	  align-items: center;
+	}
+
+	.date, .name {
+	  margin: 0; 
+	}
+	.date {
+		opacity: 0.5;
+		font-size: 0.7em;
+	}
+}
+
+@media (min-width: 600px) {
+	#projet-titre {
+		position: fixed;
+		top: 2%;
+		left: 10%;
+		font-size: 4em;
+	}
+	.projects {
+	  position: fixed;
+  	  display: flex;
+  	  margin-right: 5px;
+  	  max-width: 1200px;
+  	  justify-content: center;
+  	  flex-wrap: wrap;
+	  top: 25%;
+  	  margin-bottom: 15px;
+	  left: 10%;
+
+	}
+	.project{
+	  margin: 5px;
+  	  width: calc(25% - 10px);
+  	  margin-bottom: 15px;
+
+	}
+	.project img {
+	  width: 100px; 
+	  height: auto;
+  	  transition: transform 0.3s ease-in-out;
+	  align-items: center;
+	}
+
+	.date, .name {
+	  margin: 0; 
+	}
+	.date {
+		opacity: 0.5;
+		font-size: 0.7em;
+	}
+}
+.elm {
+    display: none;
+    position: relative;
+    right: 10%;
+}
+
+.project:hover .elm {
+    display: block;
+}
+
+.project:hover img{
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="section" id="section1">
+    {% include 'menu.html' %}
+    <h1 id="titre">Saru</h1>
+    <h3 id="description">Futur Ingénieur en Informatique</h3>
+    <button onclick="window.open('https://github.com/sarusman/', '_blank')" target="_blank" class="bt" id="git"></button>
+    <button onclick="window.open('https://www.linkedin.com/in/satkunarajah/', '_blank')"  class="bt" id="in"></button>
+    <center id="phone"><p>Scroller pour découvrir !</p></center>
+    <img id="avatar" src="{% static 'images/avatar.png'%}">
+</div>
