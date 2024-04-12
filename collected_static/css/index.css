@@ -28,14 +28,14 @@
 	#phone{
 		position: fixed;
 		color: white;
-		top: calc(85% + 5px);
+		top: 25%;
 		left: 25%;
 	}
 	#titre {
 		font-size: 2em;
-		position: absolute; 
-		top: 10%; 
-		left: 10%; 
+		position: absolute;
+		top: 10%;
+		left: 10%;
 		color: white;
 		font-weight: bold;
 		animation: slideInLeft 1s ease forwards;
@@ -63,12 +63,12 @@
 	}
 	.bt {
 			background-color: transparent;
-			background-size: cover; 
+			background-size: cover;
 			background-position: center;
-			border: none; 
-			position: fixed; 
+			border: none;
+			position: fixed;
 			transform: translateY(-50%);
-			width: 77px; 
+			width: 77px;
 			height: 70px;
 			animation: slideInLeft 1s ease forwards;
 	}
@@ -94,9 +94,9 @@
 	}
 	#titre {
 		font-size: 3em;
-			position: absolute; 
-			top: 40%; 
-			left: 10%; 
+			position: absolute;
+			top: 40%;
+			left: 10%;
 			color: white;
 			font-weight: bold;
 			animation: slideInLeft 1s ease forwards;
@@ -124,12 +124,12 @@
 
 	.bt {
 			background-color: transparent;
-			background-size: cover; 
+			background-size: cover;
 			background-position: center;
-			border: none; 
-			position: fixed; 
+			border: none;
+			position: fixed;
 			transform: translateY(-50%);
-			width: 85px; 
+			width: 85px;
 			height: 80px;
 			animation: slideInLeft 1s ease forwards;
 	}
@@ -158,22 +158,22 @@
 }
 
 #section1 {
-	background:black; 
+	background:black;
 	transform: translateY(0vh); /* La première section est visible */
 }
 
 #section2 {
 	background: rgb(43,43,43);
-	background: linear-gradient(180deg, rgba(43,43,43,1) 0%); 
+	background: linear-gradient(180deg, rgba(43,43,43,1) 0%);
 }
 
 #section3 {
 	background: rgb(43,43,43);
-	background: linear-gradient(180deg, rgba(43,43,43,1) 0%); 
+	background: linear-gradient(180deg, rgba(43,43,43,1) 0%);
 }
 #section4 {
 	background: rgb(43,43,43);
-	background: linear-gradient(180deg, rgba(43,43,43,1) 0%); 
+	background: linear-gradient(180deg, rgba(43,43,43,1) 0%);
 }
 .bt:hover {
 	cursor: pointer;
@@ -182,7 +182,7 @@
 
 
 .nav ul {
-	position: fixed; 
+	position: fixed;
 	text-align: center;
 	list-style-type: none;
 	top: 0;

@@ -10,7 +10,7 @@ mailer=mail_engine.Mail_Engine()
 def index(request):
 	formation=[model_to_dict(form) for form in Formation.objects.all()]
 	projets=[model_to_dict(pro) for pro in Projets.objects.all()]
-	#mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
+	mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
 	return render(request, "index.html", {"formation":formation, "projets":projets})
 
 def log(request):
@@ -22,7 +22,7 @@ def log(request):
 			pass
 	print(data)
 	return render(request, "index/log.html",{"data":data})
-	
+
 
 def checker(request):
 	return HttpResponse("iOBtt5U4fsQBzb2L5SSsIlkVQ1AQ2G9cyJTcorkwbGY.dKu2rqEOe0s1P47nC55iSK0ZHklTZpOnEByxLSVTeZg")

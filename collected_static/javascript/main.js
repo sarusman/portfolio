@@ -1,10 +1,10 @@
 let currentSection=0;
 const sections=document.querySelectorAll('.section');
 const totalSections=sections.length;
-let isScrolling=false; 
+let isScrolling=false;
 
 function updateSections(direction) {
-  if (isScrolling) return; 
+  if (isScrolling) return;
   isScrolling=true;
 
   currentSection +=direction;
@@ -14,13 +14,13 @@ function updateSections(direction) {
     section.style.transform=index === currentSection ? 'translateY(0)' : 'translateY(100vh)';
   });
 
-  
-  setTimeout(() => isScrolling=false, 1000); 
+
+  setTimeout(() => isScrolling=false, 1000);
 }
 
 window.addEventListener('wheel', (e) => {
-  if (e.deltaY > 0) updateSections(1); 
-  if (e.deltaY < 0) updateSections(-1); 
+  if (e.deltaY > 0) updateSections(1);
+  if (e.deltaY < 0) updateSections(-1);
 });
 
 
@@ -54,6 +54,25 @@ document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
   });
 });
 
+let startY = 0;
+
+window.addEventListener('touchstart', (e) => {
+  startY = e.touches[0].clientY;
+}, { passive: true });
+
+window.addEventListener('touchend', (e) => {
+  const endY = e.changedTouches[0].clientY;
+  const deltaY = startY - endY;
+
+
+  if (deltaY > 0) {
+
+    updateSections(1);
+  } else if (deltaY < 0) {
+
+    updateSections(-1);
+  }
+}, { passive: true });
 
 
 
