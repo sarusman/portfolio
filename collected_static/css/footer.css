@@ -1,0 +1,8 @@
+.base {
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    color: white;
+    font-size: 0.7em;
+    font-weight: initial;
+}
