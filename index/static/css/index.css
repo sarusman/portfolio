@@ -28,7 +28,7 @@
 	#phone{
 		position: fixed;
 		color: white;
-		top: calc(85% + 5px);
+		top: calc(27% + 5px);
 		left: 25%;
 	}
 	#titre {
