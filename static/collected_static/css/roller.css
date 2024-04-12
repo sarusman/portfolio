@@ -1,0 +1,33 @@
+@media (min-width: 601px) {
+  @keyframes ticker-kf {
+     0% {
+       transform: translateX(-100rem);
+     }
+     100% {
+       transform: translateX(0);
+     }
+   }
+   #roler {
+     width: 80%;
+     height: auto;
+     overflow: hidden;
+     position: relative;
+     left: 0;
+   }
+   .img-ticker {
+     width: 200px;
+     height: auto; 
+     position: absolute; 
+     display: flex;
+     animation: ticker-kf 10s linear infinite;
+     top: 15%;
+   }
+   .tickerlogo {
+     width: 8rem;
+     flex: none;
+     margin: 0 1rem 0 1rem;
+     align-self: flex-start;
+     max-width: 100%;
+     height: auto;
+   }
+ }

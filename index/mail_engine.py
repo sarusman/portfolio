@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 class Mail_Engine:
 	def __init__(self):
 		self.from_="sarusmandu92@gmail.com"
-
+		self.password = "xjix xoso wdtu jgus"
 	
 	def envoyer_email(self,objet, message, destinataire):
 		msg = MIMEMultipart()

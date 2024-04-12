@@ -1,7 +1,16 @@
-.forms{
-	position: fixed;
-	top: 20%;
-	left: 20%;
+@media (min-width: 600px){
+    .forms{
+    	position: fixed;
+    	top: 20%;
+    	left: 20%;
+    }
+}
+@media (max-width: 600px){
+    .forms{
+        position: fixed;
+        top: 20%;
+        left: 5%;
+    }
 }
 
 label{
