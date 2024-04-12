@@ -53,20 +53,17 @@ document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
-
-
-
+let startY = 0; 
 
 
 window.addEventListener('touchstart', (e) => {
-  
+  startY = e.touches[0].clientY; 
 }, { passive: true });
 
 
 window.addEventListener('touchend', (e) => {
-  
-  
+  const endY = e.changedTouches[0].clientY; 
+  const deltaY = startY - endY; 
 
   
   if (deltaY > 0) {
@@ -77,4 +74,3 @@ window.addEventListener('touchend', (e) => {
     updateSections(-1);
   }
 }, { passive: true });
-
