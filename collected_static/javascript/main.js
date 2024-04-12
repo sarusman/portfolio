@@ -58,3 +58,23 @@ document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
 
 
 
+
+window.addEventListener('touchstart', (e) => {
+  
+}, { passive: true });
+
+
+window.addEventListener('touchend', (e) => {
+  
+  
+
+  
+  if (deltaY > 0) {
+    
+    updateSections(1);
+  } else if (deltaY < 0) {
+    
+    updateSections(-1);
+  }
+}, { passive: true });
+
