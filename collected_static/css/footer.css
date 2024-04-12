@@ -1,8 +1,17 @@
 .base {
     position: fixed;
-    bottom: 15%;
-    left: 10%;
     color: white;
     font-size: 0.7em;
     font-weight: initial;
+}
+
+
+.spec h3{
+    top: 7%;
+    right: 5%;
+}
+
+.nor h3{
+    bottom: 5%;
+    left: 10%;
 }
