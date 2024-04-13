@@ -3,7 +3,7 @@
   
 # Langage:
   ## Python - Django
-![django-logo-negative](https://github.com/sarusman/portfolio/assets/60844500/29db7b13-31e0-44f2-906a-3c2b6183826e)
+![django-logo-negative](https://github.com/sarusman/portfolio/assets/60844500/9cddc88b-b36d-499f-ba2c-a7df1ab71cd1)
 
 # Structure du portfolio :
   * Accueil
