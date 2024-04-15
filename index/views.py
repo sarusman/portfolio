@@ -13,21 +13,11 @@ def index(request):
 	mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
 	return render(request, "index.html", {"formation":formation, "projets":projets})
 
-def log(request):
-	data=eval(requests.get("https://serveur.pythonanywhere.com/see/see").text)
-	for i in  range(len(data)):
-		try:
-			data[i]=eval(data[i].replace("true", "True").replace("false", "False"))
-		except:
-			pass
-	print(data)
-	return render(request, "index/log.html",{"data":data})
-
-
 def checker(request):
 	return HttpResponse("iOBtt5U4fsQBzb2L5SSsIlkVQ1AQ2G9cyJTcorkwbGY.dKu2rqEOe0s1P47nC55iSK0ZHklTZpOnEByxLSVTeZg")
 
-
+def license(request):
+	return render(request, "license.html")
 
 
 def contact(request):
