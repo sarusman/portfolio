@@ -1,2 +1,6 @@
 db.sqlite3
 index/mail_engine.py
+.DS_Store
+index/.DS_Store
+index/__pycache__
+index/templates/.DS_Store
