@@ -6,6 +6,7 @@ import requests, json, pytz, datetime
 from datetime import timedelta
 from .models import Formation, Projets
 from . import mail_engine
+import requests, ast
 
 mailer=mail_engine.Mail_Engine()
 
@@ -20,10 +21,16 @@ def index(request):
 			return redirect("https://www.youtube.com/watch?v=NGGoulSNeIs")
 		else:
 			response.set_cookie('abuse', str(va+1), expires=datetime.datetime.now()+timedelta(hours=3)) # ADAPTATION SERVEUR (TIMEZONE DIFFÉRENT (+2H))
-			mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
+			try:
+				mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
+			except:
+				pass
 	else:
 		response.set_cookie('abuse', '0', expires=datetime.datetime.now()+timedelta(hours=3)) # ADAPTATION SERVEUR (TIMEZONE DIFFÉRENT (+2H))
-		mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
+		try:
+			mailer.envoyer_email("PORTFOLIO - CONNEXION", "","sarusman.satkunarajah1@gmail.com")
+		except:
+			pass
 
 	return response
 
@@ -43,6 +50,10 @@ def contact(request):
 		mailer.envoyer_email("PORTFOLIO - MESSAGE", message, "sarusman.satkunarajah1@gmail.com")
 	return index(request)
 
+
+def btc(request):
+	res=ast.literal_eval(requests.get("https://api.coindesk.com/v1/bpi/currentprice.json").text)
+	print(res["bpi"]["EUR"])
 
 
 
